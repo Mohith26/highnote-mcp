@@ -1,0 +1,52 @@
+{
+  "name": "highnote-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that lets AI agents issue and govern Highnote virtual cards: spend limits, merchant category controls, transactions and test-environment authorizations",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "highnote-mcp": "dist/index.js"
+  },
+  "main": "dist/server.js",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "start": "node dist/index.js",
+    "schema:sync": "node scripts/sync-schema.mjs"
+  },
+  "dependencies": {
+    "@highnote-oss/nodejs-sdk": "^0.2.1",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@graphql-tools/mock": "^10.1.3",
+    "@graphql-tools/schema": "^11.0.8",
+    "@types/node": "^26.6.6",
+    "graphql": "^16.14.2",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "highnote",
+    "card-issuing",
+    "virtual-cards",
+    "spend-controls",
+    "ai-agents",
+    "agentic-payments"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mohith26/highnote-mcp.git"
+  },
+  "author": "Mohith Gajjela"
+}
